@@ -1,12 +1,14 @@
 <template>
   <div id="app">
     <div id="nav">
-      <nav class="container navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand">Logo Here</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    <nav class="container navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand">
+        <img src="../src/assets/logo1.png" alt="" height="=50" width="50">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-    </button>
+       </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
@@ -58,9 +60,9 @@
 
     &.router-link-exact-active {
       color:whitesmoke;
-      background: #42b983;
+      background: #31afb4;
       border-radius: .10rem;
-      padding: 5px;
+      padding: 7px;
     }
   }
   li {
