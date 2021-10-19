@@ -1,46 +1,50 @@
 <template>
-<div>
-  <div class="home">
-    <h1>Adopt a new best friend.</h1>
+<div class="home">
+  <div>
+    <h1>Adopt a new best friend!</h1>
   </div>
-  <div class="card-deck">
-  <div class="card">
-    <img src="" class="card-img-top" alt="">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img src="" class="card-img-top" alt="">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img src="" class="card-img-top" alt="">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-</div>
+  <b-card-group deck
+  v-for="card in cards"
+  :key="card.id"
+  v-bind:Petname="card.Petname"
+  >
+    <PetCards :data="card" />
+</b-card-group>
 </div>
 </template>
 
 <script>
+import PetCards from '../components/PetCards.vue'
 
 export default {
-  name: 'home'
+  name: 'home',
+  Petname: '',
+  components: {
+    PetCards
+  },
+  data () {
+     return {
+       cards: [
+         { id: 1, Petname: 'Lexy' },
+         { id: 2, Petname: 'Buddy' },
+         { id: 3, Petname: 'Max' },
+         { id: 4, Petname: 'Bella' },
+         { id: 5, Petname: 'Cooper' },
+         { id: 6, Petname: 'Lucy' },
+         { id: 7, Petname: 'Luna' },
+         { id: 8, Petname: 'Coda' },
+         { id: 9, Petname: 'DogName' }
+       ]
+     }
+  }
 }
 </script>
 
 <style>
 h1 {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+}
+.card-deck {
+    display: initial;
 }
 </style>
