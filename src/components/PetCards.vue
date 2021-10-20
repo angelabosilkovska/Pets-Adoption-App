@@ -1,8 +1,7 @@
 <template>
   <div class="card">
     <div class="shadow bg-white rounded">
-    <img :src="data.imageUrl"  class="card-img-top" >
-    <!-- <img src="@/assets/leksi.jpeg" class="card-img-top" alt=""> -->
+    <img :src="data.imageUrl"  class="card-img-top">
     <div class="card-body">
       <h5 class="card-title">{{data.Petname}}</h5>
       <p class="card-text">{{data.Petgender}}, {{data.Petage}}</p>
@@ -15,19 +14,11 @@
 </template>
 
 <script>
-import image from "../assets/leksi.jpeg"
+
 export default {
     name: 'PetCards',
     props: {
         data: Object
-    },
-    data(){
-      return{
-        image:image
-      }
-    },
-    mounted(){
-      console.log(JSON.stringify(this.data.imageUrl));
     }
 }
 </script>
