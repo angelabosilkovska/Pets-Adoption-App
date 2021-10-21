@@ -30,7 +30,7 @@
             <b-col
               ><b-form-select
                 v-model="selectedGender"
-                :options="options"
+                :options="optionsGender"
               ></b-form-select
             ></b-col>
           </b-row>
@@ -40,7 +40,7 @@
           variant="success"
           @click="searchDogs()"
           href="#"
-          class="w-75 p-3 mb-1"
+          class="w-75 p-3 mt-3"
           >Search</b-button
         >
       </div>
@@ -72,7 +72,11 @@ export default {
         { value: "Adult", text: "Adult" },
         { value: "Senior", text: "Senior" }
       ],
-      options: []
+      optionsGender: [
+        { value: null, text: "Gender" },
+        { value: "Male", text: "Male" },
+        { value: "Female", text: "Female" }
+      ]
     };
   },
   methods: {
@@ -82,6 +86,9 @@ export default {
       }
       if (this.search) {
         this.searchFunc("name", this.search);
+      }
+      if (this.selectedGender) {
+        this.searchFunc("gender", this.selectedGender);
       }
     }
   }
@@ -97,5 +104,7 @@ img {
 }
 .nav-link {
   color: white;
+  padding: 0rem 1rem;
 }
+
 </style>

@@ -7,7 +7,7 @@
       <p class="card-text">{{data.Petgender}}, {{data.Petage}}</p>
       <p class="card-text">{{data.Petlocation}}</p>
       <br>
-      <b-button variant="primary">See More</b-button>
+      <b-button @click="goToPets()" variant="primary">See More</b-button>
     </div>
     </div>
     </div>
@@ -19,7 +19,12 @@ export default {
     name: 'PetCards',
     props: {
         data: Object
+    },
+    methods: {
+      goToPets(){
+      router.push({ name: '/pets' });
     }
+  }
 }
 </script>
 
