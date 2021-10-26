@@ -24,10 +24,10 @@
                 <router-link to="/">Home</router-link>
               </li>
               <li class="nav-item">
-                <router-link to="/cats">Cats</router-link>
+                <router-link to="/dogs">Dogs</router-link>
               </li>
               <li class="nav-item">
-                <router-link to="/dogs">Dogs</router-link>
+                <router-link to="/cats">Cats</router-link>
               </li>
             </ul>
           </div>

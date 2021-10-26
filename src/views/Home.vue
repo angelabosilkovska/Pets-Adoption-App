@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div>
-      <h3>Adopt a new best friend</h3>
+      <h2>Adopt a new best friend</h2>
       <h5>from shelters and rescues all around the world</h5>
     </div>
     <br />
@@ -141,6 +141,7 @@ export default {
     console.log(this.dogs);
     this.allDogs = this.dogs;
     this.filteredDogs = this.allDogs;
+    this.filterDogos()
   },
   methods: {
     filterDogos(filterBy, params) {
@@ -149,6 +150,11 @@ export default {
       if (filterBy == "age" && params) {
         this.filteredDogs = this.filteredDogs.filter(el => {
           return el.Petage == params;
+        });
+      }
+      if (filterBy == "gender" && params) {
+        this.filteredDogs = this.filteredDogs.filter(el => {
+          return el.Petgender == params;
         });
       }
       if (filterBy == "name" && params) {
@@ -160,15 +166,17 @@ export default {
             .every(v => el.Petname.toLowerCase().includes(v));
         });
       }
-
       console.log("newarr", this.filteredDogs);
     }
   }
 };
 </script>
 
-<style>
-h1 {
+<style scoped>
+h2 {
+  font-weight: bold;
+}
+h3 {
   font-family: Tahoma (sans-serif);
   margin-bottom: 25px;
 }
