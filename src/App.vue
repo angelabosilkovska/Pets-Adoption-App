@@ -29,9 +29,6 @@
               <li class="nav-item">
                 <router-link to="/dogs">Dogs</router-link>
               </li>
-              <li class="nav-item">
-                <router-link to="/pet">Pet</router-link>
-              </li>
             </ul>
           </div>
           <form class="d-flex">
