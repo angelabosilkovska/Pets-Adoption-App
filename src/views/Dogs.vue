@@ -1,10 +1,10 @@
 <template>
   <div>
     <h1>Dogs for Adoption</h1>
-    <b-table striped hover :items="dogs">
-      <template #cell(Petname)="data">
-        <router-link :to="`/pets/dogs/${data.value}`">
-         {{ data.value }}
+    <b-table striped hover :fields="fields" :items="dogs">
+      <template #cell(name)="data">
+        <router-link :to="`/pets/dogs/${data.index}`">
+          {{ data.value }}
         </router-link>
       </template>
     </b-table>
@@ -16,7 +16,19 @@ import { mapState } from "vuex";
 
 export default {
   data() {
-    return {};
+    return {
+      fields: [
+        "name",
+        "age",
+        "gender",
+        "breed",
+        "color",
+        "location",
+        "weight",
+        "notes"
+      ],
+      dogID: ""
+    };
   },
   computed: {
     ...mapState(["dogs"])

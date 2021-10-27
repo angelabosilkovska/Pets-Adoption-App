@@ -22,7 +22,7 @@ export default {
   methods: {
     seePet() {
       console.log(this.data);
-      this.$router.push(`/pets/dogs/${this.data.name}`);
+      this.$router.push(`/pets/dogs/${this.data.id - 1}`);
     }
   }
 };

@@ -2,9 +2,10 @@ export default [
   {
     id: 1,
     imageUrl:
-    "https://res.cloudinary.com/dvwqurs8h/image/upload/v1634730162/Pets/leksi_2_xa4oe0.jpg",
+      "https://res.cloudinary.com/dvwqurs8h/image/upload/v1634730162/Pets/leksi_2_xa4oe0.jpg",
     name: "Lexy",
     gender: "Female",
+    breed: "golden retriever",
     age: "Adult",
     color: "white",
     weight: 50,
@@ -17,6 +18,7 @@ export default [
       "https://res.cloudinary.com/dvwqurs8h/image/upload/v1634730164/Pets/photo-1617895153857-82fe79adfcd4_evqdop_2_qfurni.jpg",
     name: "Buddy",
     gender: "Male",
+    breed: "Husky",
     age: "Puppy",
     color: "black/white",
     weight: 15,
@@ -29,6 +31,7 @@ export default [
       "https://res.cloudinary.com/dvwqurs8h/image/upload/v1634730161/Pets/Boxer_Feature-Image_mj94s9_3_coymfp.jpg",
     name: "Max",
     gender: "Male",
+    breed: "Giant Pug",
     age: "Adult",
     color: "brown/white",
     weight: 40,
@@ -39,8 +42,9 @@ export default [
     id: 4,
     imageUrl:
       "https://res.cloudinary.com/dvwqurs8h/image/upload/v1634732788/Pets/white-dog-thinkstockphotos-177514586-590sm6415_2_r6v5fl.jpg",
-    name: "Bella",
+    name: "Susie",
     gender: "Female",
+    breed: "Maltezer",
     age: "Young",
     color: "white",
     weight: 15,
@@ -53,6 +57,7 @@ export default [
       "https://res.cloudinary.com/dvwqurs8h/image/upload/v1634732786/Pets/r23z48cpy8821_k12g3k.jpg",
     name: "Cooper",
     gender: "Male",
+    breed: "Rotviler",
     age: "Puppy",
     color: "brown/black",
     weight: 20,
@@ -65,6 +70,7 @@ export default [
       "https://res.cloudinary.com/dvwqurs8h/image/upload/v1634732785/Pets/photo-1606149257644-a1f04b76c111_z8hpsa.jpg",
     name: "Lucy",
     gender: "Female",
+    breed: "Samoyed",
     age: "Young",
     color: "white",
     weight: 45,
@@ -77,6 +83,7 @@ export default [
       "https://res.cloudinary.com/dvwqurs8h/image/upload/v1634735402/Pets/photo-1572197876411-8a8e0faa2535_pqr5dz.jpg",
     name: "Luna",
     gender: "Female",
+    breed: "Labrador",
     age: "Senior",
     color: "black",
     weight: 50,
@@ -89,6 +96,7 @@ export default [
       "https://res.cloudinary.com/dvwqurs8h/image/upload/v1634735403/Pets/yorkshire-terrier-i2-sz6_2_i5th02.jpg",
     name: "Coda",
     gender: "Male",
+    breed: "collie",
     age: "Puppy",
     color: "brown/gray",
     weight: 30,
@@ -101,6 +109,7 @@ export default [
       "https://res.cloudinary.com/dvwqurs8h/image/upload/v1634735403/Pets/IMG_2057-scaled_bpk28v.jpg",
     name: "Rex",
     gender: "Male",
+    breed: "German Shepard",
     age: "Adult",
     color: "brown/black",
     weight: 50,
@@ -136,7 +145,7 @@ export default [
   {
     id: 12,
     imageUrl:
-    "https://res.cloudinary.com/dvwqurs8h/image/upload/v1635331449/Pets/image_dygfk3.jpg",
+      "https://res.cloudinary.com/dvwqurs8h/image/upload/v1635331449/Pets/image_dygfk3.jpg",
     name: "Zeus",
     breed: "afghan hound",
     gender: "Male",
@@ -149,7 +158,7 @@ export default [
   {
     id: 13,
     imageUrl:
-    "https://res.cloudinary.com/dvwqurs8h/image/upload/v1635331562/Pets/Red-Golden-Lab-in-Field_tsvm1o.jpg",
+      "https://res.cloudinary.com/dvwqurs8h/image/upload/v1635331562/Pets/Red-Golden-Lab-in-Field_tsvm1o.jpg",
     name: "Katie",
     breed: "golden retriever",
     gender: "Female",
@@ -158,6 +167,5 @@ export default [
     weight: 44,
     location: "Struga",
     notes: "Super friendly"
-  },
-
+  }
 ];
