@@ -3,9 +3,9 @@
     <div class="shadow bg-white rounded">
       <img :src="data.imageUrl" class="card-img-top" />
       <div class="card-body">
-        <h5 class="card-title">{{ data.Petname }}</h5>
-        <p class="card-text">{{ data.Petgender }}, {{ data.Petage }}</p>
-        <p class="card-text">{{ data.Petlocation }}</p>
+        <h5 class="card-title">{{ data.name }}</h5>
+        <p class="card-text">{{ data.gender }}, {{ data.age }}</p>
+        <p class="card-text">{{ data.location }}</p>
         <br />
         <b-button @click="seePet()" variant="primary">See More</b-button>
       </div>
@@ -22,7 +22,7 @@ export default {
   methods: {
     seePet() {
       console.log(this.data);
-      this.$router.push(`/pets/dogs/${this.data.Petname}`);
+      this.$router.push(`/pets/dogs/${this.data.name}`);
     }
   }
 };

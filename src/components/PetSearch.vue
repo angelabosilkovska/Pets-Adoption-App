@@ -19,7 +19,6 @@
         </div>
         <br />
         <div class="w-75">
-          <!-- <p>Age</p> -->
           <b-row class="mt-3 ">
             <b-col class=""
               ><b-form-select

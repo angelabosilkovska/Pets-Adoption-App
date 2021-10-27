@@ -4,7 +4,7 @@
     <b-table striped hover :items="dogs">
       <template #cell(Petname)="data">
         <router-link :to="`/pets/dogs/${data.value}`">
-          {{ data.value }}
+         {{ data.value }}
         </router-link>
       </template>
     </b-table>
