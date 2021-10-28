@@ -1,7 +1,7 @@
 <template>
-<div class= "center">
+  <div class="center">
     <h4>Insert Pet Information Below</h4>
-    <b-form @submit="onSubmit" v-if="show">
+    <b-form @submit.prevent="onSubmit" v-if="show">
       <b-form-group id="input-group-2" label="Pet Name:" label-for="input-2">
         <b-form-input
           id="input-2"
@@ -29,7 +29,7 @@
         ></b-form-input>
       </b-form-group>
 
-       <b-form-group id="input-group-2" label="Pet Breed:" label-for="input-2">
+      <b-form-group id="input-group-2" label="Pet Breed:" label-for="input-2">
         <b-form-input
           id="input-2"
           v-model="form.breed"
@@ -47,7 +47,11 @@
         ></b-form-input>
       </b-form-group>
 
-      <b-form-group id="input-group-2" label="Pet Loacation:" label-for="input-2">
+      <b-form-group
+        id="input-group-2"
+        label="Pet Loacation:"
+        label-for="input-2"
+      >
         <b-form-input
           id="input-2"
           v-model="form.location"
@@ -66,77 +70,113 @@
       </b-form-group>
 
       <b-form-group
-      label="Notes about pet:"
-      label-for="textarea-formatter"
-      class="mb-0"
-    >
-      <b-form-textarea
-        id="textarea-formatter"
-        class="mb-2"
-        v-model="form.notes"
-        placeholder="Enter your text"
-        :formatter="formatter"
-      ></b-form-textarea>
-    </b-form-group>
+        label="Notes about pet:"
+        label-for="textarea-formatter"
+        class="mb-0"
+      >
+        <b-form-textarea
+          id="textarea-formatter"
+          class="mb-2"
+          v-model="form.notes"
+          placeholder="Enter your text"
+          :formatter="formatter"
+        ></b-form-textarea>
+      </b-form-group>
 
-       <b-form-group id="input-group-3" label="Species:" label-for="input-3">
+      <b-form-group id="input-group-3" label="Species:" label-for="input-3">
         <b-form-select
           id="input-3"
           v-model="form.species"
-          :options="['cats', 'dogs' , 'other']"
+          :options="['cats', 'dogs', 'other']"
           placeholder="Choose Species"
           required
         ></b-form-select>
       </b-form-group>
 
-        <div class="row justify-content-center">
-         <b-button type="submit" variant="primary">Submit</b-button>
-        </div>
-
+      <div class="row justify-content-center">
+        <b-button type="submit" variant="primary">Submit</b-button>
+      </div>
     </b-form>
   </div>
 </template>
 
 <script>
-import { mapActions } from 'vuex';
+import { mapActions } from "vuex";
 
 export default {
-    name: 'newPet',
+  name: "newPet",
 
-    data() {
-      return {
-        form: {
-        name: '',
-        age: '',
-        gender: '',
-        breed: '',
-        color: '',
-        location: '',
-        weight: '',
-        notes: '',
-        species: null,
-        checked: []
-        },
-        show: true
-      }
-    },
-    methods: {
-      onSubmit(event) {
-        event.preventDefault()
-        alert(JSON.stringify(this.form))
+  data() {
+    return {
+      form: {
+        name: "",
+        age: "",
+        gender: "",
+        breed: "",
+        color: "",
+        location: "",
+        weight: "",
+        notes: "",
+        species: null
       },
+      show: true
+    };
+  },
+  methods: {
+    ...mapActions(["addPet"]),
+    onSubmit() {
+      const {
+        species,
+        age,
+        name,
+        gender,
+        breed,
+        color,
+        location,
+        weight,
+        notes
+      } = this.form;
+
+      const payload = {
+        species,
+        pet: {
+          name,
+          age,
+          gender,
+          breed,
+          color,
+          location,
+          weight,
+          notes
+        }
+      };
+      this.addPet(payload);
+
+      //clear form
+      this.form = {
+        name: "",
+        age: "",
+        gender: "",
+        breed: "",
+        color: "",
+        location: "",
+        weight: "",
+        notes: "",
+        species: null
+      };
     }
   }
+};
 </script>
 
 <style scoped>
 .center {
-margin: auto;
-width: 60%;
-padding: 10px;
+  margin: auto;
+  width: 60%;
+  padding: 10px;
 }
 h4 {
-    margin-bottom: 20px;
-    text-align: center;
+  margin-bottom: 20px;
+  text-align: center;
 }
 </style>
