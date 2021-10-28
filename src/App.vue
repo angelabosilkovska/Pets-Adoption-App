@@ -31,18 +31,9 @@
               </li>
             </ul>
           </div>
-          <form class="d-flex">
-            <input
-              id="btn1"
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
+            <button class="btn btn-outline-success" @click="AddPet()">
+              Add New Pet +
             </button>
-          </form>
         </div>
       </nav>
     </div>
@@ -51,6 +42,22 @@
     </b-container>
   </div>
 </template>
+
+<script>
+import { defineComponent } from '@vue/composition-api'
+
+export default defineComponent({
+  setup() {
+
+  },
+  methods: {
+    AddPet() {
+      this.$router.push("/newPet");
+    }
+  }
+})
+</script>
+
 
 <style lang="scss">
 #app {
